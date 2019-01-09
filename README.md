@@ -32,7 +32,7 @@ This project has the following limitations:
   - **Email:** test_eiazqkt_user@tfbnw.net
   - **Password:** test1234
 
-If you want to become an app tester, please contact me on Facebook (MyUsername: fb/abubakrchamp).
+If you want to become an app tester, please contact me on [Facebook](https://www.facebook.com/AbubakrChamp).
 
 ## Known Bugs
 
@@ -40,4 +40,4 @@ This project has the following known bugs:
 
 - If you go back in browser history after signing out, you can still see the profile information before refreshing the page
 
-If you find any bugs on this app, please let me know on Facebook (MyUsername: fb/abubakrchamp).
+If you find any bugs on this app, please let me know on [Facebook](https://www.facebook.com/AbubakrChamp).
