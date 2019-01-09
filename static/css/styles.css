@@ -1,0 +1,381 @@
+/*-----------------------------*/
+/* BASIC SETUP */
+/*-----------------------------*/
+
+* {
+  padding: 0;
+  margin: 0;
+  outline: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  color: #2980b9;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  text-align: center;
+  background-image: linear-gradient(#00000088, #00000088),
+    url("../images/shapes_lines_colorful_abstract_104775_1280x1024.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  text-rendering: optimizeLegibility;
+  overflow: hidden;
+}
+
+/*-----------------------------*/
+/* REUSABLE COMPONENTS */
+/*-----------------------------*/
+
+/* ------ HEADINGS ------ */
+
+h1,
+h2,
+h3 {
+  font-weight: 300;
+  text-transform: uppercase;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", sans-serif;
+}
+
+h1 {
+  color: #fff;
+  font-size: 300%;
+  word-spacing: 4px;
+  letter-spacing: 1px;
+  margin: 55px auto;
+}
+
+h2 {
+  font-size: 200%;
+  margin-bottom: 25px;
+  word-spacing: 2px;
+  letter-spacing: 1px;
+}
+
+h3 {
+  font-size: 110%;
+}
+
+/* ------ PARAGRAPHS ------ */
+
+.form-alert {
+  font-size: 70%;
+  text-align: left;
+  margin: 0;
+  padding: 5px;
+  color: #ff0000;
+  text-transform: capitalize;
+  border-radius: 5px;
+  width: 80%;
+  margin-left: 10%;
+  visibility: hidden;
+}
+
+.username {
+  color: #444;
+  text-transform: capitalize;
+  font-family: Cambria, "Times New Roman", serif;
+  line-height: 145%;
+  font-size: 120%;
+}
+
+/* ------ IMAGES ------ */
+
+.profile-pic {
+  display: block;
+  height: 200px;
+  width: 200px;
+  margin: 0 auto 5px auto;
+  border-radius: 50%;
+}
+
+/* ------ DIVS ------ */
+.container {
+  position: relative;
+  max-width: 1140px;
+  height: 100%;
+  margin: auto;
+}
+
+.content {
+  margin: auto;
+  position: relative;
+  max-width: 70%;
+  height: 70%;
+  background-color: #fff;
+  box-shadow: 2px 2px 2px #00000088;
+  border-radius: 5px;
+  padding: 1rem;
+  overflow: hidden;
+  perspective: 1000px;
+  transition: 300ms;
+}
+
+.content:hover {
+  box-shadow: 4px 4px 2px #00000088;
+}
+
+.form-facebook {
+  border-top: #555 1px dashed;
+  padding-top: 15px;
+  width: 80%;
+  margin: 0 auto;
+  transform: translateY(-10px);
+}
+
+/* ------ LINKS ------ */
+
+.link:link,
+.link:visited {
+  font-size: 75%;
+  text-decoration: underline;
+  color: #2980b9;
+  transition: 300ms;
+}
+
+.link:hover,
+.link:active {
+  color: #1a5073;
+}
+
+.link-form {
+  float: left;
+  margin-left: 10%;
+  margin-top: 22px;
+}
+
+.link-logout {
+  margin-right: 10%;
+  margin-top: 22px;
+  float: right;
+}
+
+.flip-login:hover .link-arrow::before,
+.flip-profile:hover .link-arrow::before {
+  animation: arrow-right 800ms infinite;
+}
+
+.flip-signup:hover .link-arrow::before,
+.flip-pic:hover .link-arrow::before {
+  animation: arrow-left 800ms infinite;
+}
+
+@keyframes arrow-right {
+  0% {
+    transform: translateX(0%);
+  }
+  50% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes arrow-left {
+  0% {
+    transform: translateX(0%);
+  }
+  50% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+/* ------ BUTTONS ------ */
+
+.btn,
+.btn:visited {
+  color: #fff;
+  background-color: #2980b9;
+  border: 1px #2980b9 solid;
+  border-radius: 200px;
+  font-size: 80%;
+  padding: 10px 30px;
+  margin: 10px auto;
+  text-transform: uppercase;
+  user-select: none;
+  cursor: pointer;
+  transition: 300ms;
+}
+
+.btn:hover {
+  background-color: #1a5073;
+  border-color: #1a5073;
+}
+
+.btn:active {
+  background-color: #2980b9;
+  border: 1px #2980b9 solid;
+  transform: scale(0.9);
+}
+
+.btn-submit {
+  float: right;
+  margin-right: 10%;
+}
+
+.btn-submit:disabled {
+  background-color: #1a5073;
+  border-color: #1a5073;
+  color: #c0c0c0;
+  cursor: default;
+}
+
+.btn-facebook {
+  padding: 2% 7%;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #3b5998;
+  font-weight: 100;
+  font-size: 80%;
+  border: none;
+  text-transform: uppercase;
+  user-select: none;
+  cursor: pointer;
+  transition: 300ms;
+}
+
+.btn-facebook:hover {
+  background-color: #324b80;
+}
+
+/* ------ INPUTS ------ */
+
+.input-text {
+  font-family: "Courier New", Courier, monospace;
+  display: block;
+  width: 80%;
+  padding: 1rem;
+  margin: 8px 10%;
+  color: #4ea1d8;
+  background-color: #eef9fe;
+  border: 1px #4ea1d8 solid;
+  border-radius: 4px;
+  transition: 300ms;
+}
+
+.input-text::placeholder {
+  text-transform: uppercase;
+  color: #4ea1d8;
+}
+
+.input-text:hover {
+  background-color: #4ea1d8;
+}
+
+.input-text:hover::placeholder {
+  color: #fff;
+}
+.input-text:focus:hover {
+  color: #4ea1d8;
+}
+
+.input-text:focus::placeholder {
+  color: #4ea1d8;
+}
+
+.input-text:focus:hover::placeholder {
+  color: #fff;
+}
+
+.input-file {
+  height: 0.1px;
+  width: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -999;
+}
+
+.input-file + label {
+  width: 100px;
+  user-select: none;
+  cursor: pointer;
+}
+
+.input-file + label span,
+.input-file + label i::before {
+  font-weight: 100;
+  color: #fff;
+  background-color: #2980b9;
+  display: block;
+  max-width: 80%;
+}
+
+.input-file + label span {
+  width: 60%;
+  background: transparent;
+  color: #2980b9;
+  border-radius: 10px;
+  font-size: 100%;
+  padding: 10px 30px;
+  margin: 0 auto 25px auto;
+  text-transform: uppercase;
+  transition: 300ms;
+}
+
+.input-file + label i::before {
+  display: block;
+  font-size: 140px;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  margin: 10px auto;
+  transition: 300ms;
+}
+
+.input-file + label:hover i::before {
+  background-color: #1a5073;
+}
+
+.input-file + label:hover span {
+  color: #1a5073;
+}
+
+/* ------ FORM FLIP ------ */
+
+.flip-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: 600ms;
+  transform-style: preserve-3d;
+}
+
+.form-login,
+.form-signup,
+.form-pic,
+.profile {
+  position: relative;
+  width: 100%;
+  height: 80%;
+  margin-top: 5%;
+  transition: 300ms ease;
+}
+
+.front,
+.back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.front {
+  z-index: 2;
+}
+
+.back {
+  transform: rotateY(180deg);
+  z-index: 1;
+}

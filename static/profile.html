@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/ionicons.min.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <title>Profile</title>
+  </head>
+
+  <script>
+    fetch("/E1uE3dN9cS5lP7lG2jH3yW1pI7qL8jA8hC0uE2gV3zD6qT2o")
+      .then(res => res.json())
+      .then(user => {
+        if (!user.error) {
+          if (user.dp) {
+            if (user.dp.indexOf("\\") !== -1) {
+              let imgName = user.dp.split("\\").pop();
+              $(".profile-pic").attr("src", `images/profile-pics/${imgName}`);
+            } else {
+              $(".link-form").hide();
+              $(".profile-pic").attr("src", user.dp);
+            }
+          }
+          let userName = user.username;
+          $(".username").text(userName);
+          $("#title").text(`Weclome ${userName}`);
+        } else {
+          location.href = "/401";
+        }
+      });
+  </script>
+
+  <body>
+    <div class="container">
+      <h1 id="title">Weclome to the site</h1>
+
+      <div class="content">
+        <div class="flip-card">
+          <div class="front">
+            <div class="profile">
+              <h2>Profile</h2>
+
+              <img
+                src="images/profile-pics/person.svg"
+                alt="profile Picture"
+                class="profile-pic"
+              />
+
+              <p class="username">Username</p>
+
+              <a href="#" class="link flip-profile link-form">
+                Upload photo <i class="ion-ios-arrow-forward link-arrow"></i>
+              </a>
+
+              <a href="/logout" class="link link-logout">Sign Out</a>
+            </div>
+          </div>
+
+          <div class="back">
+            <div class="form-pic">
+              <h2>Profile Picture</h2>
+
+              <form
+                action="/upload"
+                method="POST"
+                enctype="multipart/form-data"
+              >
+                <input type="file" name="dp" id="dp" class="input-file" />
+
+                <label for="dp">
+                  <i class="ion-upload"></i>
+                  <span>Choose a Picture&hellip; </span>
+                </label>
+
+                <a href="#" class="link link-form flip-pic">
+                  <i class="ion-ios-arrow-back link-arrow"></i> Profile
+                </a>
+
+                <input type="submit" value="Upload" class="btn btn-submit" />
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/script.js"></script>
+</html>
