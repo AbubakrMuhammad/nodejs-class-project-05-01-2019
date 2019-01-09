@@ -1,5 +1,16 @@
 # NodeJS Project
 
+## Features
+
+This project has the following features:
+
+- Professional looking
+- Has Good Animations
+- Store users info in a JSON file
+- Use PassportJS local authentication
+- Use Facebook authentication (Please read about bugs)
+- User can upload profile photo
+
 ## Dependencies
 
 This project has the following dependencies:
