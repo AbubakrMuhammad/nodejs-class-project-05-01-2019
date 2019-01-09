@@ -23,13 +23,13 @@ This project has the following dependencies:
 - [passport-facebook](http://www.passportjs.org/packages/passport-facebook/ "Passport strategy for authenticating with Facebook")
 - [passport-local](http://www.passportjs.org/packages/passport-local/ "Passport strategy for authenticating with a username and password.")
 
-
 ## Limitations
 
 This project has the following limitations:
 
 - Facebook authentication can only be used for App testers. Some Test users are:
-    - **Username:** Test User
-    - **Email:** test_eiazqkt_user@tfbnw.net	
-    - **Password:** test1234
-    If you want to become an app tester, please contact me on Facebook.
+  - **Username:** Test User
+  - **Email:** test_eiazqkt_user@tfbnw.net
+  - **Password:** test1234
+
+If you want to become an app tester, please contact me on Facebook.
