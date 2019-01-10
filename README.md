@@ -1,5 +1,14 @@
 # NodeJS Project
 
+## Usage
+
+Create a new account or Use one of the existing accounts
+
+- **Username:** test
+- **Password:** 1234
+
+OR you can use Facebook to Login (Read Limitations below)
+
 ## Features
 
 This project has the following features:

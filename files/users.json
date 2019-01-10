@@ -1,1 +1,9 @@
-[{"username":"test","password":"1234","id":"H6wO2dG6hK6vX9vY0gJ5iQ8wU0tV9eW0xN1wW8qC2uT4uK4q","dp":"static\\images\\profile-pics\\test-abstraction_sharp_figure_101902_1280x1024.jpg","fb":false},{"id":"107153450375659","username":"Test User","dp":"https://platform-lookaside.fbsbx.com/platform/profilepic/?asid=107153450375659&height=200&width=200&ext=1549650639&hash=AeQ0MbHQ0wCRSizs","fb":true}]
+[
+  {
+    "username": "test",
+    "password": "1234",
+    "id": "H6wO2dG6hK6vX9vY0gJ5iQ8wU0tV9eW0xN1wW8qC2uT4uK4q",
+    "dp": "static\\images\\profile-pics\\test-dragon_background_light_shadow_16514_1280x1024.jpg",
+    "fb": false
+  }
+]
