@@ -22,6 +22,8 @@ This project has the following features:
 
 ## Plugins
 
+This Project uses the following plugins:
+
 - **CSS:** [Normalize CSS](https://necolas.github.io/normalize.css/ "A modern, HTML5-ready alternative to CSS resets")
 - **ICONS:** [Ion Icons](https://ionicons.com/v2/ "The premium icon font")
 - **JAVASCRIPT:** [Jquery](https://jquery.com/ "jQuery is a fast, small, and feature-rich JavaScript library")
